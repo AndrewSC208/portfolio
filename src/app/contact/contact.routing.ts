@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders }  from '@angular/core';
-import { KitchenSinkComponent } from './kitchen-sink.component';
+import { ContactComponent } from './contact.component';
 
 export const routing: ModuleWithProviders = RouterModule.forChild([
-  { path: 'kitchen-sink', component: KitchenSinkComponent}
+  { path: 'contact', component: ContactComponent}
 ]);
