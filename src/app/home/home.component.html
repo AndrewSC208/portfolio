@@ -1,14 +1,19 @@
-<div class="container">
+<div class="wrapper">
+  
+
+<div class="container" id="home">
 	
   <div class="row">
     <div class="col-xs">
-  		<div class="jumbotron flex-items-xs-middle">
-  			<h1>{{ title }}</h1>
-   			<p>This example is a quick exercise to illustrate how the default responsive navbar works. It's placed within a <code>.container</code> to limit its width and will scroll with the rest of the page's content.</p>
-   			<p>At the smallest breakpoint, the collapse plugin is used to hide the links and show a menu button to toggle the collapsed content.</p>
-   			<p><a class="btn btn-lg btn-primary" href="" role="button">View navbar docs</a></p>
+  		<div class="jumbotron">
+  			<h1 class="display-1">Hi,</h1>
+        <h2 class="display-4">I'm Andrew Meiling</h2>
+   			<p class="lead">A Fron-End Devloper in San Diego</p>
+   			<p><a class="btn btn-lg btn-outline-secondary" [routerLink]="['/about']">About</a></p>
   		</div>    
     </div>
   </div>
 
 </div> <!-- ./container -->
+
+</div>

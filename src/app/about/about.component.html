@@ -1,52 +1,71 @@
 <div class="container" id="home">
-	 <div class="row">
+
+	 <div class="row flex-items-xs-top">
     <div class="col-xs">
   		<div class="jumbotron text-xs-center">
   			<h1>{{ title }}</h1>
   		</div>    
     </div>
-  </div>
+  </div> <!-- ./row -->
 
-  <div class="row">
+  <div class="row flex-items-xs-middle">
 
-  	<div class="col-md-4 col-lg-6">
-  		<img class="center-block img-fluid" src="http://placehold.it/550x550" alt="placeholder">
+  	<div class="col-xs-12 col-sm-6">
+  		<img class="img-fluid img-circle m-x-auto" src="http://placehold.it/350x350" alt="placeholder">
   		<!-- <img class="img-responsive center-block" src="https://res.cloudinary.com/drkmakxkk/image/upload/v1474224689/head_shot_f4o16l.jpg" alt="Picture of Andrew Meiling Smiling"> -->
   	</div>
 
-  	<div class="col-md-8 col-lg-6">
-
-      <div class="row accordion-row">
-        <div class="col-xs-12 col-lg-4">
-          <button class="btn btn-primary text-uppercase toggle-btn" type="button" data-toggle="collapse" data-target="#Bio" aria-expanded="false" aria-controls="Bio">Bio</button>
-        </div>
-        <div class="col-xs-12 col-lg-4">
-          <button class="btn btn-primary text-uppercase toggle-btn" type="button" data-toggle="collapse" data-target="#Experience" aria-expanded="false" aria-controls="Experience">Experience</button>
-        </div>
-        <div class="col-xs-12 col-lg-4">
-          <button class="btn btn-primary text-uppercase toggle-btn" type="button" data-toggle="collapse" data-target="#Education" aria-expanded="false" aria-controls="Education">Education</button>
+  	<div class="col-xs-12 col-sm-6 center-v-h">
+      <div class="collapse" id="about">
+        <div class="card card-block">
+          <p class="lead text-xs-center">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
         </div>
       </div>
-        
       
-      <div class="collapse" id="Bio">
+      <div class="collapse" id="work">
         <div class="card card-block">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          <p class="lead text-xs-center">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
         </div>
       </div>
-
-      <div class="collapse" id="Experience">
+      
+      <div class="collapse" id="education">
         <div class="card card-block">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          <p class="lead text-xs-center">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
         </div>
       </div>
-
-      <div class="collapse" id="Education">
+      
+      <div class="collapse" id="play">
         <div class="card card-block">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          <p class="lead text-xs-center">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
         </div>
       </div>
-
+      
   	</div>
+
+  </div> <!-- ./row -->
+
+  <div class="row btn-row">
+    <div class="col-xs">
+      <a class="btn btn-outline-primary" data-toggle="collapse" href="#about" aria-expanded="false" aria-controls="about">
+        About
+      </a>
+    </div>
+    <div class="col-xs">
+      <a class="btn btn-outline-primary" data-toggle="collapse" href="#work" aria-expanded="false" aria-controls="work">
+        Work
+      </a>
+    </div>
+    <div class="col-xs">
+      <a class="btn btn-outline-primary" data-toggle="collapse" href="#education" aria-expanded="false" aria-controls="education">
+        Education
+      </a>
+    </div>
+    <div class="col-xs">
+      <a class="btn btn-outline-primary" data-toggle="collapse" href="#play" aria-expanded="false" aria-controls="play">
+        Play
+      </a>
+    </div>
   </div>
-</div>
+
+</div> <!-- ./container -->
+
