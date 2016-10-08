@@ -1,6 +1,13 @@
 
 #home {
-	padding-top: 60px;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
 
 
 	.jumbotron {
