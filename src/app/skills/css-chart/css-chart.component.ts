@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-html-chart',
-  templateUrl: './html-chart.component.html',
-  styleUrls: ['./html-chart.component.scss'],
+  selector: 'app-css-chart',
+  templateUrl: './css-chart.component.html',
+  styleUrls: ['./css-chart.component.scss']
 })
-export class HtmlChartComponent implements OnInit {
+export class CssChartComponent implements OnInit {
 
   constructor() { }
 
@@ -13,7 +13,7 @@ export class HtmlChartComponent implements OnInit {
   }
 
   // Doughnut
-  public doughnutChartData:number[] = [100, 25];
+  public doughnutChartData:number[] = [100, 50];
   public doughnutChartType:string = 'doughnut';
   public doughnutChartColors: any[] = [
     { backgroundColor: ["#00fff", "#000000"]}

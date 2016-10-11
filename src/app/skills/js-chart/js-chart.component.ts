@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-html-chart',
-  templateUrl: './html-chart.component.html',
-  styleUrls: ['./html-chart.component.scss'],
+  selector: 'app-js-chart',
+  templateUrl: './js-chart.component.html',
+  styleUrls: ['./js-chart.component.scss']
 })
-export class HtmlChartComponent implements OnInit {
+export class JsChartComponent implements OnInit {
 
   constructor() { }
 
