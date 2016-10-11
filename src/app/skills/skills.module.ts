@@ -4,11 +4,15 @@ import { SkillsComponent } from './skills.component';
 
 import { routing } from './skills.routing';
 
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { HtmlChartComponent } from './html-chart/html-chart.component';
+
 @NgModule({
   imports: [
     CommonModule,
-    routing
+    routing,
+    ChartsModule
   ],
-  declarations: [SkillsComponent]
+  declarations: [SkillsComponent, HtmlChartComponent]
 })
 export class SkillsModule { }
