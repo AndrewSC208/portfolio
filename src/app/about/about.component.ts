@@ -15,4 +15,15 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+	cards = [
+		{ title : 'About'},
+		{ title : 'Work'},
+		{ title : 'Education'},
+		{ title : 'Play'},
+	]
+
+	onSelect(card) {
+		console.log(card);
+	}
+
 }

@@ -34,19 +34,19 @@ export class ContactComponent implements OnInit {
   }
 
   postMessage() {
-  	this._httpMessageService.postMessage( this.message )
-  	.subscribe(
-  	  // set the reg value for res:
-      res   => this.postMessageRes = res,
-  	  error => console.log("and error occured"),
-  	  ()    =>  this.message = { 
-                  sender_name : "", 
-                  email: "", 
-                  subject: "", 
-                  message_body: "", 
-                  fun_fact: ""
-                }
-     )
+  	// this._httpMessageService.postMessage( this.message )
+  	// .subscribe(
+  	//   // set the reg value for res:
+   //    res   => this.postMessageRes = res,
+  	//   error => console.log("and error occured"),
+  	//   ()    =>  this.message = { 
+   //                sender_name : "", 
+   //                email: "", 
+   //                subject: "", 
+   //                message_body: "", 
+   //                fun_fact: ""
+   //              }
+   //   )
   }
 
 }
