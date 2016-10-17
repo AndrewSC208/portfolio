@@ -5,14 +5,19 @@
 	
 
 	.brand-row {
+
+		margin-top: 3rem;
+
+		p {
+			color: #ffffff;
+		}
 			
 		.col-sm-2 {
 			// needed for image positioning:
 			display: flex;
   		flex-direction: column;
   		justify-content: center;
-			// remove/change
-			background-color: rgba(25,255,255,0.75);
+			background-color: #666666;
 		}
 
 		img {
