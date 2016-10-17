@@ -12,40 +12,16 @@
 
   	<div class="col-xs-12 col-sm-6">
   		<img class="img-fluid img-circle m-x-auto" src="https://res.cloudinary.com/drkmakxkk/image/upload/c_scale,h_350,w_350/v1474224689/head_shot_f4o16l.jpg" alt="placeholder">
-  		<!-- <img class="img-responsive center-block" src="https://res.cloudinary.com/drkmakxkk/image/upload/v1474224689/head_shot_f4o16l.jpg" alt="Picture of Andrew Meiling Smiling"> -->
   	</div>
 
   	<div class="col-xs-12 col-sm-6 center-v-h">
 
       <div>
-        <div class="card card-block">
-          <p class="lead text-xs-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, pariatur. Alias sunt unde assumenda harum, sapiente deleniti explicabo pariatur in labore culpa excepturi voluptas dicta ipsa esse tenetur laborum aut.</p>
+        <div class="card card-block" *ngIf="selectedCard">
+          <h4 class="card-title">{{ selectedCard.title }}</h4>
+          <p class="lead">{{ selectedCard.text }}</p>
         </div>
       </div>
-
-<!--       <div class="collapse" id="about_me">
-        <div class="card card-block">
-          <p class="lead text-xs-center">About</p>
-        </div>
-      </div>
-      
-      <div class="collapse" id="work">
-        <div class="card card-block">
-          <p class="lead text-xs-center">Work</p>
-        </div>
-      </div>
-      
-      <div class="collapse" id="education">
-        <div class="card card-block">
-          <p class="lead text-xs-center">Education</p>
-        </div>
-      </div>
-      
-      <div class="collapse" id="play">
-        <div class="card card-block">
-          <p class="lead text-xs-center">Play</p>
-        </div>
-      </div> -->
       
   	</div>
 
@@ -53,31 +29,14 @@
 
   <div class="row btn-row">
     
-    <div class="col-xs" *ngFor="let card of cards" (click)="onSelect(card)">
-      <a class="btn btn-outline-secondary">{{ card.title }}</a>
+    <div 
+      class="col-xs" 
+      *ngFor="let card of cards" 
+      (click)="onSelect(card)"
+      [class.selected]="card === selectedCard">
+        <button class="btn btn-outline-secondary">{{ card.title }}</button>
     </div>
 
-<!--     <div class="col-xs">
-      <a class="btn btn-outline-secondary" href="#about_me">
-        About
-      </a>
-    </div>
-    <div class="col-xs">
-      <a class="btn btn-outline-secondary" data-toggle="collapse" href="#work" aria-expanded="false" aria-controls="work">
-        Work
-      </a>
-    </div>
-    <div class="col-xs">
-      <a class="btn btn-outline-secondary" data-toggle="collapse" href="#education" aria-expanded="false" aria-controls="education">
-        Education
-      </a>
-    </div>
-    <div class="col-xs">
-      <a class="btn btn-outline-secondary" data-toggle="collapse" href="#play" aria-expanded="false" aria-controls="play">
-        Play
-      </a>
-    </div>
- -->
   </div>
 
 </div> <!-- ./container -->

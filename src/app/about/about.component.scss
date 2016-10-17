@@ -17,10 +17,18 @@
 		}
 	}
 
-	.toggle-btn {
-		width: 100%;
-		margin-top: 15px;
-		margin-bottom: 15px;
+	p {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	img {
+		margin-bottom: 2rem;
+	}
+
+	.selected {
+		color: #fffff !important;
+		background-color: #ccccc;
 	}
 
 	// center vertically and horizontally
@@ -39,10 +47,13 @@
 			padding-bottom: 4rem;
 		}
 
-		a {
+		button {
 			width: 100%;
 		}
+
 	}
+
+
 
 } /* == #/home == */
 
