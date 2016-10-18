@@ -1,37 +1,45 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+
 import { Message } from './message';
+import { Observable } from 'rxjs/Observable';
+import '../rxjs-operators';
 
 @Injectable()
 export class MessageService {
 	/* ++ CLASS VARIABLES ++ */
-	private baseURl:  string = 'https://morning-journey-82445.herokuapp.com';
-	private tableUrl: string = '/messages';
-	message: Message;
+	private baseURl:  string = 'https://morning-journey-82445.herokuapp.com/messages';
 
 	constructor(private http: Http) {}
 
-	// /* ++ EXTERNAL CLASS METHODS ++ */
-	// getMessages() {
- //  		return this.http.get(this.baseURl + this.tableUrl).map(res => res.json());
- //  }
+	getMessages(): Observable<Message[]> {
+  		return this.http.get(this.baseURl)
+  			.map(this.extractData)
+  			.catch(this.handleError);
+  }
 
-  postMessage(message: Message) {
+  postMessage(message: Message): Observable<Message> {
   	
- //  	let body = JSON.stringify({message});
- //  	let headers = new Headers({ 'Content-Type': 'application/json' });
- //  	let options = new RequestOptions({ headers: headers, method: 'post' });
+  	let body = JSON.stringify({message});
+  	let headers = new Headers({ 'Content-Type': 'application/json' });
+  	let options = new RequestOptions({ headers: headers, method: 'post' });
 
- //  	return this.http.post(this.baseURl + this.tableUrl, body, options)
- //      // THIS IS THE RESPONSE FROM THE SERVER
-	//  		.map(res => res.json())
- //  		.catch(this.handleError);
- //  	}
+  	return this.http.post(this.baseURl, body, options)
+      // THIS IS THE RESPONSE FROM THE SERVER
+			.map(this.extractData)
+  		.catch(this.handleError);
+  }
 
-	//   /* ++ PRIVATE CLASS METHODS ++ */
- //  	private handleError (error: Response) {
- //  		console.error(error);
- //  		return Observable.throw(error.json().error || 'error');
-   }
+  private extractData(res: Response) {
+    let body = res.json();
+    return body.data || { };
+  }
+
+  private handleError (error: any) {
+  	// In a real world app, we might use a remote logging infrastructure
+  	// We'd also dig deeper into the error to get a better message
+  	let errMsg = (error.message) ? error.message : error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+    console.error(errMsg); // log to console instead
+    return Observable.throw(errMsg);
+  }
 }
