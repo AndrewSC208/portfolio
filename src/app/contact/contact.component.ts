@@ -14,7 +14,16 @@ export class ContactComponent implements OnInit {
   messages: Message[];
   mode = 'Observable';
   message: Message;
+
+  model = new Message('Andrew', 'meilingandrew@gmail.com', 'Subject', 'We want to hire you and pay you a TON of money', 'Fun fact');
 	
+  submitted = false;
+
+  // TODO: Remove this when we're done
+  get diagnostic() { return JSON.stringify(this.model); }
+
+  onSubmit() { this.submitted = true; }
+
   constructor(private messageService: MessageService) {}
 
   ngOnInit() { 
