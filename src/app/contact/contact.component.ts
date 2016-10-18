@@ -15,14 +15,23 @@ export class ContactComponent implements OnInit {
   mode = 'Observable';
   message: Message;
 
-  model = new Message('Andrew', 'meilingandrew@gmail.com', 'Subject', 'We want to hire you and pay you a TON of money', 'Fun fact');
+  model = new Message("", "", "", "", "");
+
+  active = true;
+
+  newMessage() {
+    this.addMessage(this.model);
+    console.log(this.model);
+    this.model = new Message("", "", "", "", "");
+    this.active = false;
+    setTimeout(() => this.active = true, 0)
+  }
 	
   submitted = false;
 
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
-
-  onSubmit() { this.submitted = true; }
+  onSubmit() {
+    this.submitted = true; 
+  }
 
   constructor(private messageService: MessageService) {}
 
@@ -38,7 +47,7 @@ export class ContactComponent implements OnInit {
   }
 
   addMessage(message: Message): Observable<Message> {
-
+    console.log("did this send?");
     if(!message) { return; }
 
     this.messageService.postMessage(message)

@@ -7,7 +7,7 @@ import '../rxjs-operators';
 
 @Injectable()
 export class MessageService {
-	/* ++ CLASS VARIABLES ++ */
+  
 	private baseURl:  string = 'https://morning-journey-82445.herokuapp.com/messages';
 
 	constructor(private http: Http) {}
