@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
   constructor(private messageService: MessageService) {}
 
   ngOnInit() { 
-    this.getMessages();
+    console.log(this.getMessages());
   }
 
   getMessages() {
