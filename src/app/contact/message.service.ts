@@ -8,11 +8,15 @@ import '../rxjs-operators';
 @Injectable()
 export class MessageService {
   
-	private baseURl:  string = 'https://morning-journey-82445.herokuapp.com/messages';
+	// private baseURl:  string = 'https://morning-journey-82445.herokuapp.com/messages';
+  private baseURl:  string = 'http://localhost:8080/api1/message';
 
 	constructor(private http: Http) {}
 
 	getMessages(): Observable<Message[]> {
+      
+      console.log("this ran?");
+
   		return this.http.get(this.baseURl)
   			.map(this.extractData)
   			.catch(this.handleError);
@@ -25,12 +29,13 @@ export class MessageService {
   	let options = new RequestOptions({ headers: headers, method: 'post' });
 
   	return this.http.post(this.baseURl, body, options)
-      // THIS IS THE RESPONSE FROM THE SERVER
+      // RES FROM SERVER
 			.map(this.extractData)
   		.catch(this.handleError);
   }
 
-  private extractData(res: Response) {
+  private extractData(res) {
+    console.log(res._body);
     let body = res.json();
     return body.data || { };
   }

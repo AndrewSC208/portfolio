@@ -12,48 +12,44 @@ import { Observable } from 'rxjs/Observable';
 export class ContactComponent implements OnInit {
   errorMessage: string;
   messages: Message[];
-  mode = 'Observable';
   message: Message;
-
   model = new Message("", "", "", "", "");
-
   active = true;
+  submitted = false;
+  mode = 'Observable';
 
-  newMessage() {
+  constructor(private messageService: MessageService) {}
+
+  private newMessage() {
     this.addMessage(this.model);
-    console.log(this.model);
     this.model = new Message("", "", "", "", "");
     this.active = false;
     setTimeout(() => this.active = true, 0)
   }
 	
-  submitted = false;
-
-  onSubmit() {
-    this.submitted = true; 
-  }
-
-  constructor(private messageService: MessageService) {}
-
-  ngOnInit() { 
-    console.log(this.getMessages());
-  }
-
-  getMessages() {
+  private getMessages() {
     this.messageService.getMessages()
       .subscribe(
         messages => this.messages = messages,
         error => this.errorMessage = <any>error);
   }
 
-  addMessage(message: Message): Observable<Message> {
-    console.log("did this send?");
+  private addMessage(message: Message): Observable<Message> {
+
     if(!message) { return; }
 
     this.messageService.postMessage(message)
       .subscribe(
         message => this.messages.push(message),
         error => this.errorMessage = <any>error);
+  }
+
+  onSubmit() {
+    this.submitted = true; 
+  }
+
+  ngOnInit() { 
+    console.log(this.getMessages());
   }
 
 }

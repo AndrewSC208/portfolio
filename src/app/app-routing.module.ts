@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+/* FEATURE MODULES */
+import { HomeModule } from './home/home.module';
+import { AboutModule } from './about/about.module';
+import { ContactModule } from './contact/contact.module';
+import { PortfolioModule } from './portfolio/portfolio.module';
+import { SkillsModule } from './skills/skills.module';
+
 const routes: Routes = [
-	// {path: 'about', loadChildren: 'app/about/about.module#AboutModule' },
-	// {path: 'contact', loadChildren: 'app/contact/contact.module#ContactModule' },
-	// {path: 'porfolio', loadChildren: 'app/porfolio/porfolio.module#PorfolioModule' },
-	// {path: 'skills', loadChildren: 'app/skills/skills.module#SkillsModule' },
-	{path: '', redirectTo: 'home', pathMatch: 'full'},
-	
+	{path: '', redirectTo: 'home', pathMatch: 'full'},	
 ];
 
 @NgModule({
