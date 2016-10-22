@@ -27,20 +27,20 @@ export class ContactComponent implements OnInit {
     setTimeout(() => this.active = true, 0)
   }
 	
-  private getMessages() {
-    this.messageService.getMessages()
-      .subscribe(
-        messages => this.messages = messages,
-        error => this.errorMessage = <any>error);
-  }
+  // private getMessages() {
+  //   this.messageService.getMessages()
+  //     .subscribe(
+  //       messages => messages = messages,
+  //       error => this.errorMessage = <any>error);
+  // }
 
-  private addMessage(message: Message): Observable<Message> {
+  private addMessage(message) {
 
     if(!message) { return; }
 
     this.messageService.postMessage(message)
       .subscribe(
-        message => this.messages.push(message),
+        message => console.log(message),
         error => this.errorMessage = <any>error);
   }
 
@@ -49,7 +49,6 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() { 
-    console.log(this.getMessages());
   }
 
 }
