@@ -4,6 +4,11 @@
 
 #home {
 	height: 100vh;
+	 background: url("https://res.cloudinary.com/drkmakxkk/image/upload/v1477020491/home-bg_asf9fz.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 	.col-xs {
 		position: relative;
