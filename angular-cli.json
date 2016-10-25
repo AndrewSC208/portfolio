@@ -16,8 +16,7 @@
       "mobile": false,
       "styles": [
         "styles.scss",
-        "../node_modules/bootstrap/scss/bootstrap-flex.scss",
-        "../node_modules/_sass/hamburgers/hamburgers.scss"
+        "../node_modules/bootstrap/scss/bootstrap-flex.scss"
         
       ],
       "scripts": [

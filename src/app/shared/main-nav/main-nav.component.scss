@@ -1,7 +1,6 @@
 @import "./hamburgers";
 
 #main-nav {
-	margin-bottom: 20px;
 
 	.active {
 		border-bottom: 2px solid #eee;
@@ -30,23 +29,7 @@
 	}
 
 	.popout-nav {
-		z-index: -9999;
-		color: red;
+
 	}
-
-.container {
-	padding-top: 0px;
-	margin-top: 0px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-}
-
-.container-fluid {
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-	padding-top: 0px;
-	margin-top: 0px;
-}
-
 
 }

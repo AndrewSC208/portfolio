@@ -1,4 +1,5 @@
 <div class="container-fluid" id="main-nav">
+
   <nav class="navbar navbar-full navbar-fixed-top navbar-light">
     <div class="hidden-sm-up">
       <button class="hamburger hamburger--collapse" type="button" (click)="isClassVisible = !isClassVisible;" [ngClass]="{'is-active': isClassVisible }">
@@ -30,11 +31,10 @@
     </div>
   </nav> <!-- /navbar -->
 
-<div class="container-fluid" *ngIf="isClassVisible">
-  <div>
-    <h2 class="popout-nav">This is a test</h2>
-  </div>  
-</div>
+  <div class="container-fluid" *ngIf="isClassVisible">
+    <div>
+      <h2 class="popout-nav">This is a test</h2>
+    </div>  
+  </div>
 
-  <router-outlet></router-outlet>
 </div> <!-- ./conatiner-fluid -->
