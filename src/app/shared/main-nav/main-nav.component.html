@@ -1,5 +1,27 @@
 <div class="container-fluid" id="main-nav">
 
+  <div class="overlay open" id="overlay" *ngIf="isClassVisible">
+    <nav class="overlay-menu">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/skills']">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/portfolio']">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
   <nav class="navbar navbar-full navbar-fixed-top navbar-light">
     <div class="hidden-sm-up">
       <button class="hamburger hamburger--collapse" type="button" (click)="isClassVisible = !isClassVisible;" [ngClass]="{'is-active': isClassVisible }">
@@ -12,29 +34,29 @@
     <div class="collapse navbar-toggleable-xs" id="navbar-header">
       <a class="navbar-brand" [routerLink]="['/home']"><img class="saturn-icon navbar-brand" src="saturn.svg" alt="icon" height="60px"></a>
       <ul class="nav navbar-nav pull-xs-right">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        <li class="nav-item">
+          <a class="nav-link display-4" [routerLink]="['/home']">Home</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/about']">About</a>
+        <li class="nav-item">
+          <a class="nav-link display-4" [routerLink]="['/about']">About</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/skills']">Skills</a>
+        <li class="nav-item">
+          <a class="nav-link display-4" [routerLink]="['/skills']">Skills</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/portfolio']">Portfolio</a>
+        <li class="nav-item">
+          <a class="nav-link display-4" [routerLink]="['/portfolio']">Portfolio</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+        <li class="nav-item">
+          <a class="nav-link display-4" [routerLink]="['/contact']">Contact</a>
         </li>
       </ul>
     </div>
   </nav> <!-- /navbar -->
 
-  <div class="container-fluid" *ngIf="isClassVisible">
+<!--   <div class="container-fluid" *ngIf="isClassVisible">
     <div>
       <h2 class="popout-nav">This is a test</h2>
     </div>  
-  </div>
+  </div> -->
 
 </div> <!-- ./conatiner-fluid -->
