@@ -1,10 +1,15 @@
 <div class="container-fluid" id="main-nav">
-  <nav class="navbar navbar-full navbar-fixed-top navbar-light" style="background-color: rgba(255,255,255,.5);">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
-      &#9776;
-    </button>
+  <nav class="navbar navbar-full navbar-fixed-top navbar-light">
+    <div class="hidden-sm-up">
+      <button class="hamburger hamburger--collapse" type="button" (click)="isClassVisible = !isClassVisible;" [ngClass]="{'is-active': isClassVisible }">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+
     <div class="collapse navbar-toggleable-xs" id="navbar-header">
-      <a class="navbar-brand" [routerLink]="['/home']">Brand</a>
+      <a class="navbar-brand" [routerLink]="['/home']"><img class="saturn-icon navbar-brand" src="saturn.svg" alt="icon" height="60px"></a>
       <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['/home']">Home</a>
@@ -24,39 +29,12 @@
       </ul>
     </div>
   </nav> <!-- /navbar -->
-</div> <!-- ./conatiner -->
 
+<div class="container-fluid" *ngIf="isClassVisible">
+  <div>
+    <h2 class="popout-nav">This is a test</h2>
+  </div>  
+</div>
 
-<!--     <div class="collapse" id="navbar-header">
-      <div class="container-fluid bg-inverse p-a-1">
-        <h3>Collapsed content</h3>
-        <p>Toggleable via the navbar brand.</p>
-      </div>
-    </div>
-    <div class="navbar navbar-light bg-faded navbar-static-top m-b-1">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
-        &#9776;
-      </button>
-
-      <div class="collapse navbar-toggleable-xs" id="navbar-header">
-        <a class="navbar-brand" [routerLink]="['/home']">Brand</a>
-        <ul class="nav navbar-nav pull-xs-right">
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['/home']">Home</a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['/about']">About</a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['/skills']">Skills</a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['/portfolio']">Portfolio</a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['/contact']">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-    </div> -->
+  <router-outlet></router-outlet>
+</div> <!-- ./conatiner-fluid -->

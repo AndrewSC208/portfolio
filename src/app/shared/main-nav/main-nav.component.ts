@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent implements OnInit {
+	isClassVisible: false;
 
   constructor() { }
 

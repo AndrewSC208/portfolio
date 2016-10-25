@@ -1,3 +1,52 @@
+@import "./hamburgers";
+
 #main-nav {
 	margin-bottom: 20px;
+
+	.active {
+		border-bottom: 2px solid #eee;
+	}
+
+	nav {
+		// background-color: rgba(255,255,255,.75);
+		// border-bottom: 1px solid #eee;
+	}
+
+	.navbar-brand {
+
+		img {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	ul {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	a {
+		color: #eee;
+	}
+
+	.popout-nav {
+		z-index: -9999;
+		color: red;
+	}
+
+.container {
+	padding-top: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.container-fluid {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+
 }
