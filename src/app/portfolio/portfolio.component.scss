@@ -62,4 +62,10 @@ $light-border-color: rgba(255,255,255, .50);
 		}
 	}
 
+  .card {
+    background-color: rgba(255,255,255, .15);
+    border:1px solid rgba(255,255,255, .50);
+    color: white;
+  }
+
 }

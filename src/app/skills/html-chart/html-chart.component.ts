@@ -16,7 +16,7 @@ export class HtmlChartComponent implements OnInit {
   public doughnutChartData:number[] = [100, 25];
   public doughnutChartType:string = 'doughnut';
   public doughnutChartColors: any[] = [
-    { backgroundColor: ["#00fff", "#000000"]}
+    { backgroundColor: ["rgba(255,255,255,.50)", "rgba(255,255,255,.10)"]}
   ];
 
 
