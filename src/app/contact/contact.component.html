@@ -1,41 +1,44 @@
-<div class="container" id="contact">
-					
-	<div class="row contact-block">
+<div class="container-fluid" id="contact">
 	
-		<div class="col-sm-8 contact-form m-x-auto">
-			<h1>{{ title }}</h1>
-			<form class="center-block" *ngIf="active" (ngSubmit)="onSubmit()" #messageForm="ngForm">
-					
-					<div class="form-group">
-						<label for="sender_name"></label>
- 						<input [(ngModel)]="model.sender_name" name="sender_name" type="text" id="sender_name" class="form-control form-control-lg" placeholder="Name" aria-describedby="sizing-addon1" required>
- 						
- 					</div>
-
- 					<div class="form-group">
- 						<label for="email"></label>
- 						<input [(ngModel)]="model.email" name="email" type="email" id="email" class="form-control form-control-lg" placeholder="Email" aria-describedby="sizing-addon1" required>
- 					</div>
-
- 					<div class="form-group">
-						<label for="subject"></label>
-						<input [(ngModel)]="model.subject" name="subject" type="text" id="subject" class="form-control form-control-lg" placeholder="Subject" aria-describedby="sizing-addon1" required>
-					</div>
-
-					<div class="form-group">
-						<label for="message_body"></label>
-						<textarea [(ngModel)]="model.message_body" name="message_body" type="text" id="message_body" class="form-control form-control-lg" placeholder="Message" aria-describedby="sizing-addon1" required></textarea>
-					</div>
-
-					<div class="form-group">
-						<label for="fun_fact"></label>
-						<input [(ngModel)]="model.fun_fact" name="fun_fact" type="text" id="fun_fact" class="form-control form-control-lg" placeholder="Fun Fact About Yourself" aria-describedby="sizing-addon1" optional>
-					</div>
-					
-					<button type="submit" class="btn btn-lg btn-outline-secondary col-sm-4 contact-block" (click)="newMessage()" [disabled]="!messageForm.form.valid">Submit</button>
-			</form>
-
-		</div><!-- ./contact-form -->
-	</div><!-- ./row -->
-
-</div><!-- ./container -->
+	<div class="container">
+						
+		<div class="row contact-block">
+		
+			<div class="col-sm-8 contact-form m-x-auto">
+				<h1>{{ title }}</h1>
+				<form class="center-block" *ngIf="active" (ngSubmit)="onSubmit()" #messageForm="ngForm">
+						
+						<div class="form-group">
+							<label for="sender_name"></label>
+	 						<input [(ngModel)]="model.sender_name" name="sender_name" type="text" id="sender_name" class="	form-control form-control-lg" placeholder="Name" aria-describedby="sizing-addon1" required>
+	 						
+	 					</div>
+	
+	 					<div class="form-group">
+	 						<label for="email"></label>
+	 						<input [(ngModel)]="model.email" name="email" type="email" id="email" class="form-control 	form-control-lg" placeholder="Email" aria-describedby="sizing-addon1" required>
+	 					</div>
+	
+	 					<div class="form-group">
+							<label for="subject"></label>
+							<input [(ngModel)]="model.subject" name="subject" type="text" id="subject" class="form-control 	form-control-lg" placeholder="Subject" aria-describedby="sizing-addon1" required>
+						</div>
+	
+						<div class="form-group">
+							<label for="message_body"></label>
+							<textarea [(ngModel)]="model.message_body" name="message_body" type="text" id="message_body" 	class="form-control form-control-lg" placeholder="Message" aria-describedby="sizing-addon1" 	required></textarea>
+						</div>
+	
+						<div class="form-group">
+							<label for="fun_fact"></label>
+							<input [(ngModel)]="model.fun_fact" name="fun_fact" type="text" id="fun_fact" class="	form-control form-control-lg" placeholder="Fun Fact About Yourself" aria-describedby="	sizing-addon1" optional>
+						</div>
+						
+						<button type="submit" class="btn btn-lg btn-outline-secondary col-sm-4 contact-block" (click)="newMessage()" [disabled]="!messageForm.form.valid">Submit</button>
+				</form>
+	
+			</div><!-- ./contact-form -->
+		</div><!-- ./row -->
+	
+	</div><!-- ./container -->
+</div> <!-- ./container-fluid -->

@@ -1,79 +1,28 @@
 <div class="container-fluid" id="portfolio">
   
-<div class="container">
-
-	<div class="row">
-
-		<div class="col-sm-6">
-			<div class="card">
-  			<div class="card-block">
-    			<h4 class="card-title">Brandly</h4>
-    			<h6 class="card-subtitle">A simple branding website</h6>
-  			</div>
-  			
-  			<img src="https://res.cloudinary.com/drkmakxkk/image/upload/v1472444195/brandly_lln0xb.jpg" alt="Card image" class="img-fluid">
-  			
-  			<div class="card-block">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et totam laboriosam, ex voluptate possimus repudiandae. Error incidunt dolor nisi, ut quam magnam architecto harum maxime unde, reprehenderit illo quo. Sint.</p>
-    			<a href="http://andrewmeilingbrand.s3-website-us-east-1.amazonaws.com" target="_blank" class="card-link btn btn-outline-secondary">Visit</a>
-    			<a href="https://github.com/AndrewSC208/branded" target="_blank" class="card-link btn btn-outline-secondary">Source Code</a>
-  			</div>
-			</div>
-		</div>
-
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-block">
-          <h4 class="card-title">Brandly</h4>
-          <h6 class="card-subtitle">A simple branding website</h6>
-        </div>
-        
-        <img src="https://res.cloudinary.com/drkmakxkk/image/upload/v1472444195/brandly_lln0xb.jpg" alt="Card image" class="img-fluid">
-        
-        <div class="card-block">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et totam laboriosam, ex voluptate possimus repudiandae. Error incidunt dolor nisi, ut quam magnam architecto harum maxime unde, reprehenderit illo quo. Sint.</p>
-          <a href="http://andrewmeilingbrand.s3-website-us-east-1.amazonaws.com" target="_blank" class="card-link btn btn-outline-secondary">Visit</a>
-          <a href="https://github.com/AndrewSC208/branded" target="_blank" class="card-link btn btn-outline-secondary">Source Code</a>
+  <div class="container">
+  
+  	<div class="row">
+  
+      <div *ngFor="let item of portfolioItems" class="col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">{{item.title}}</h4>
+            <h6 class="card-subtitle">{{item.subtitle}}</h6>
+          </div>
+          
+          <img class="img-fluid" [src]="item.imgUrl">
+  
+          <div class="card-block">
+            <p class="card-text">{{item.text}}</p>
+            <a target="_blank" [href]="item.url" class="card-link btn btn-outline-secondary">Visit</a>
+            <a target="_blank" [href]="item.sourceUrl" class="card-link btn btn-outline-secondary">Source Code</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-block">
-          <h4 class="card-title">Brandly</h4>
-          <h6 class="card-subtitle">A simple branding website</h6>
-        </div>
-        
-        <img src="https://res.cloudinary.com/drkmakxkk/image/upload/v1472444195/brandly_lln0xb.jpg" alt="Card image" class="img-fluid">
-        
-        <div class="card-block">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et totam laboriosam, ex voluptate possimus repudiandae. Error incidunt dolor nisi, ut quam magnam architecto harum maxime unde, reprehenderit illo quo. Sint.</p>
-          <a href="http://andrewmeilingbrand.s3-website-us-east-1.amazonaws.com" target="_blank" class="card-link btn btn-outline-secondary">Visit</a>
-          <a href="https://github.com/AndrewSC208/branded" target="_blank" class="card-link btn btn-outline-secondary">Source Code</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-block">
-          <h4 class="card-title">Brandly</h4>
-          <h6 class="card-subtitle">A simple branding website</h6>
-        </div>
-        
-        <img src="https://res.cloudinary.com/drkmakxkk/image/upload/v1472444195/brandly_lln0xb.jpg" alt="Card image" class="img-fluid">
-        
-        <div class="card-block">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et totam laboriosam, ex voluptate possimus repudiandae. Error incidunt dolor nisi, ut quam magnam architecto harum maxime unde, reprehenderit illo quo. Sint.</p>
-          <a href="http://andrewmeilingbrand.s3-website-us-east-1.amazonaws.com" target="_blank" class="card-link btn btn-outline-secondary">Visit</a>
-          <a href="https://github.com/AndrewSC208/branded" target="_blank" class="card-link btn btn-outline-secondary">Source Code</a>
-        </div>
-      </div>
-    </div>
-
-	</div> <!-- ./row -->
-
-</div> <!-- ./container -->
+  
+  	</div> <!-- ./row -->
+  
+  </div> <!-- ./container -->
 
 </div> <!-- ./container-fluid -->

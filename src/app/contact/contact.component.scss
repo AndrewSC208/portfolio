@@ -1,11 +1,58 @@
 #contact {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+	height: 100vh;
+	background: url("https://res.cloudinary.com/drkmakxkk/image/upload/v1473476897/water-bg_ng3hfo.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  padding-top: 2rem;
+	min-height: 100vh;
+
+	@media (min-width: 544px) {
+		padding-top: 4rem;
+	}
 
 	// Large devices (desktops, 992px and up)
 	@media (min-width: 992px) {
 		padding-top: 5rem;
-		padding-bottom: 5rem;
+	}
+
+	.container {
+		margin-top: 2rem;
+		
+		@media (min-width: 544px) {
+			margin-top: 3rem;
+		}
+
+	}
+
+	input, textarea {
+		background-color: rgba(255,255,255,.10);
+		border: 1px solid rgba(255,255,255, .75);
+		color: rgba(255,255,255, 1);
+	}
+
+	textarea:focus, input:focus {
+  	border: 1px solid rgba(255,255,255, .75);
+  	-webkit-transition: border .5s;
+  	transition: border .5s;
+  	background-color: rgba(255,255,255, .25);
+  	-webkit-transition: background-color .5s;
+  	transition: background-color .5s;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255,255,255, 1);
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: rgba(255,255,255, 1);
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: rgba(255,255,255, 1);
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: rgba(255,255,255, 1);
 	}
 
 	button {

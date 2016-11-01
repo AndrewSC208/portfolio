@@ -7,7 +7,9 @@ $color-link: #FFF;
 
 #main-nav {
 
-	
+	.scrolled {
+		background-color: red;
+	}
 
 	.active {
 		border-bottom: 2px solid #eee;

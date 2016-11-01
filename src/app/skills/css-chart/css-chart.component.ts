@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+let template = require('./css-chart.component.html');
+
+
 @Component({
   selector: 'app-css-chart',
-  templateUrl: './css-chart.component.html',
+  templateUrl: template,
   styleUrls: ['./css-chart.component.scss']
 })
 export class CssChartComponent implements OnInit {
@@ -13,15 +16,11 @@ export class CssChartComponent implements OnInit {
   }
 
   // Doughnut
-  public doughnutChartData:number[] = [100, 50];
+  public doughnutChartData:number[] = [85, 15];
   public doughnutChartType:string = 'doughnut';
   public doughnutChartColors: any[] = [
     { backgroundColor: ["rgba(255,255,255,.50)", "rgba(255,255,255,.10)"]}
   ];
-
-
-  public chartHovered(e:any):void {
-    console.log(e);
-  }
+  public doughnutChartLabels:string[] = ['CSS Skills'];
 
 }
