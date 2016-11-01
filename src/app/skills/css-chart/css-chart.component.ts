@@ -22,5 +22,7 @@ export class CssChartComponent implements OnInit {
     { backgroundColor: ["rgba(255,255,255,.50)", "rgba(255,255,255,.10)"]}
   ];
   public doughnutChartLabels:string[] = ['CSS Skills'];
-
+  public options = {
+    "cutoutPercentage" : "65"
+  };
 }
