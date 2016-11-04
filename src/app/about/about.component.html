@@ -6,6 +6,7 @@
       <div class="col-xs">
   		  <div class="jumbotron text-xs-center">
   			 <h1 class="display-4">Andrew Meiling | Front-End Developer</h1>
+         <h3 class="lead pull-left">Developer with a background in marketing and management.</h3>
   		  </div>    
       </div>
     </div> <!-- ./row -->
@@ -21,7 +22,7 @@
         <div>
           <div class="card card-block" *ngIf="selectedCard">
             <h4 class="card-title">{{ selectedCard.title }}</h4>
-            <p class="lead">{{ selectedCard.text }}</p>
+            <p class="lead" *ngFor="let p of selectedCard.text">{{ p }}</p><br>
           </div>
         </div>
       
