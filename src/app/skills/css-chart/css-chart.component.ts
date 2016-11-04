@@ -22,13 +22,14 @@ export class CssChartComponent implements OnInit {
     { 
       backgroundColor: ["rgba(255,255,255,.50)", "rgba(255,255,255,.10)"],
       borderWidth : 0,
+      tooltip: {
+        enabled: false,
+      }
     }
   ];
-  public doughnutChartLabels:string[] = ['CSS Skills'];
-
+ 
   // I need to dive a little deeper into the chart settings, I would like to remove the border!
   public options = {
     "cutoutPercentage" : "75",
-
   };
 }
