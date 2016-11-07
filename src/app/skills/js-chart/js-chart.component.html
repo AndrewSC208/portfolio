@@ -1,7 +1,8 @@
 <div style="display: block">
   <canvas baseChart
               [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
               [chartType]="doughnutChartType"
-              (chartHover)="chartHovered($event)"
-              [colors]="doughnutChartColors"></canvas>
+              [colors]="doughnutChartColors"
+              [options]="options"></canvas>
 </div>

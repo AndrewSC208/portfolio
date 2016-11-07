@@ -1,8 +1,8 @@
 $color-background: #262D35;
 
 // colors for gradiant:
-$color-background-1: #F8CDDA;
-$color-background-2: #1D2B64;
+$color-background-1: #362D6C;
+$color-background-2: #0C5593;
 $light-white: rgba(255,255,255, .15);
 $light-border-color: rgba(255,255,255, .50);
 
@@ -82,6 +82,7 @@ $light-border-color: rgba(255,255,255, .50);
 	.brand-row {
 
 		margin-top: 3rem;
+    margin-bottom: 1rem;
     background-color: rgba(255,255,255,.15);
     border:1px solid rgba(255,255,255,.50);
 

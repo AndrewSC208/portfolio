@@ -22,7 +22,9 @@ export class MessageService {
   postMessage(message: Message): Observable <Message> {
   	
   	let body = JSON.stringify(message);
-  	let headers = new Headers({ 'Content-Type': 'application/json' });
+  	let headers = new Headers({ 
+      'Content-Type': 'application/json', 
+      'Access-Control-Allow-Origin': '*'});
   	let options = new RequestOptions({ headers: headers, method: 'post' });
 
   	return this.http.post(this.baseURl, body, options)
