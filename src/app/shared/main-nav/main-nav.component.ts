@@ -6,8 +6,9 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent implements OnInit {
-	isClassVisible: false;
-	isScrolled;
+	isClassVisible = false;
+	isScrolled = false;
+  scrollVal = 0;
 
   constructor() { }
 
@@ -16,10 +17,24 @@ export class MainNavComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event']) 
     doSomething(event) {
-    	if (document.body.scrollTop != 0) {
-    		this.isScrolled = !this.isScrolled;
+    	if (document.body.scrollTop && !this.isClassVisible) {
+    		this.isScrolled = true;
+        this.scrollVal = document.body.scrollTop;
     	};
 
-    	console.log(document.body.scrollTop);
+      if (document.body.scrollTop === 0) {
+        this.isScrolled = false;
+        this.scrollVal = document.body.scrollTop;
+      };
+    	
   };
+
+  changeMenu() {
+    if (this.scrollVal == 0) {
+      this.isScrolled=this.isScrolled;
+    } else {
+      this.isScrolled=!this.isScrolled;
+    }
+    
+  }
 }

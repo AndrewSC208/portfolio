@@ -1,4 +1,4 @@
-<div class="container-fluid" id="main-nav" [class.scrolled]="isScrolled">
+<div class="container-fluid" id="main-nav">
 
   <div class="overlay open" id="overlay" *ngIf="isClassVisible">
     <nav class="overlay-menu">
@@ -22,9 +22,9 @@
     </nav>
   </div>
 
-  <nav class="navbar navbar-full navbar-fixed-top navbar-light">
+  <nav class="navbar navbar-full navbar-fixed-top navbar-light" [class.scrolled]="isScrolled">
     <div class="hidden-sm-up">
-      <button class="hamburger hamburger--collapse" type="button" (click)="isClassVisible = !isClassVisible;" [ngClass]="{'is-active': isClassVisible }">
+      <button class="hamburger hamburger--collapse" type="button" (click)="isClassVisible = !isClassVisible;changeMenu();" [ngClass]="{'is-active': isClassVisible }">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
