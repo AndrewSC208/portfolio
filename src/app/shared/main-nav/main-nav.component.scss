@@ -8,7 +8,12 @@ $color-link: #FFF;
 #main-nav {
 
 	.scrolled {
-		background-color: rgba(54,45,108, .50);
+		//background-color: rgba(54,45,108, .50);
+		background-color: rgba(12, 85, 147, .75);
+    background-image: -webkit-linear-gradient(to top right, rgba(12, 85, 147, .75), rgba(54, 45, 108, .75));
+    background-image: -moz-linear-gradient(to top right, rgba(12, 85, 147, .75), rgba(54, 45, 108, .75));
+    background-image: -o-linear-gradient(to top right, rgba(12, 85, 147, .75), rgba(54, 45, 108, .75));
+    background-image: linear-gradient(to top right, rgba(12, 85, 147, .75), rgba(54, 45, 108, .75));
 		-webkit-transition: background-color .5s;
   	transition: background-color .5s;
 	}
@@ -69,7 +74,10 @@ $color-link: #FFF;
 
 	.overlay {
 	  position: fixed;
-	  background: $color-main;
+	  background-image: -webkit-linear-gradient(to top right, rgba(12, 85, 147, .85), rgba(54, 45, 108, .85));
+    background-image: -moz-linear-gradient(to top right, rgba(12, 85, 147, .85), rgba(54, 45, 108, .85));
+    background-image: -o-linear-gradient(to top right, rgba(12, 85, 147, .85), rgba(54, 45, 108, .85));
+    background-image: linear-gradient(to top right, rgba(12, 85, 147, .85), rgba(54, 45, 108, .85));
 	  top: 0;
 	  left: 0;
 	  width: 100%;

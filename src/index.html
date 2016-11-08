@@ -19,7 +19,11 @@
       width: 100%;
       top: 0;
       left: 0;
-      background: #262D35;
+      background-color: #0C5593;
+      background-image: -webkit-linear-gradient(to top right, #0C5593, #362D6C);
+      background-image: -moz-linear-gradient(to top right, #0C5593, #362D6C);
+      background-image: -o-linear-gradient(to top right, #0C5593, #362D6C);
+      background-image: linear-gradient(to top right, #0C5593, #362D6C);
       z-index: -1;
     }
     app-root:empty + .loading {
@@ -48,7 +52,7 @@
     /* http://tobiasahlin.com/blog/how-to-animate-box-shadow/ */
     /* http://jsfiddle.net/PGa2H/2/ */
 
-    @keyframes blink {
+/*    @keyframes blink {
       0% { box-shadow: 0 0 15px green; }
       50% { box-shadow: none; }
       100% { box-shadow: 0 0 15px green; }
@@ -66,7 +70,7 @@
         -ms-animation: blink 1.0s linear infinite;
         -o-animation: blink 1.0s linear infinite;
         animation: blink 1.0s linear infinite;
-    }
+    }*/
 </style>
 
   <app-root></app-root>
